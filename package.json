@@ -1,0 +1,15 @@
+{
+  "name": "aa_twitter_clone_by_suthesh_pravin_v",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Suthehsh Pravin V",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
