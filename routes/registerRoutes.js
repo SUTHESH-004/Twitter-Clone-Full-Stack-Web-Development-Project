@@ -15,7 +15,7 @@ router.get("/",(req,res,next)=>{
     res.status(200).render("register");
     //see here we are changing this from "send" to "render" m s, a,kmlfkemfklew
 });
-router.post("/",(req,res,next)=>{
+router.post("/",async(req,res,next)=>{
      
     var firstname = req.body.firstName.trim();
     var lastname = req.body.lastName.trim();
@@ -27,17 +27,36 @@ router.post("/",(req,res,next)=>{
 
     if(firstname&&lastname&&username&&email&&password)
     {
-         User.findOne({
+        var user= await User.findOne({
              $or:[
                 {userName:username},
                 {email: email}]
                 //just  or operator in mango db
                 //these pink brackets are like where clause
                 })
-                .then((user)=>{
-                  console.log(user);
+                .catch(()=>{
+                    console.log(error);
+                    payload.errorMessage = "Something went wrong";
+                    res.status(200).render("register",payload);
                 })
-         // its going to find a one row where userName in schema = username in register.js;
+                if(user==null){
+                   //no user found 
+                }
+                else{
+                    if(email==user.email)
+                    {
+                        payload.errorMessage="Email already in use";   
+                    }
+                    else
+                    {
+                        payload.errorMessage="Username already in use";
+                    }
+                    render.status(200).render("register",payload);
+                }
+                // console.log(user);
+                // console.log("Its running");
+                //if its was not a await then its running would be displayed first instead user;
+         // its going to find a one row where userName in schema = username in register
         
     }
     else{
