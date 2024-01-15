@@ -2,16 +2,26 @@ const express = require('express');
 const app =express();
 const port = 3000;
 const middleware = require('./middleware')
+const path = require('path');
+const bodyparser = require("body-parser");
+const mongoose = require("./database");
+
+
 
 const server = app.listen(port,()=>console.log("Server listening on port " + port));
 
-
 app.set("view engine","pug");
 app.set("views","views");
+app.use(bodyparser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname,"public")));
+//public file static so anyone can use that 
 
+//
 //Routes
 const loginRoute= require('./routes/loginRoutes')
+const RegisterRoute= require('./routes/registerRoutes')
 app.use("/login",loginRoute);
+app.use("/register",RegisterRoute);
 
 app.get("/",middleware.requireLogin,(req,res,next)=>{
 
