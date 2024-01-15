@@ -40,7 +40,17 @@ router.post("/",async(req,res,next)=>{
                     res.status(200).render("register",payload);
                 })
                 if(user==null){
-                   //no user found 
+                   //no user found so we can add it 
+                   var data = req.body;
+                   User.create(data)
+                   .then((user)=>{
+                        console.log(user);
+                   })
+
+
+
+
+
                 }
                 else{
                     if(email==user.email)
@@ -51,7 +61,7 @@ router.post("/",async(req,res,next)=>{
                     {
                         payload.errorMessage="Username already in use";
                     }
-                    render.status(200).render("register",payload);
+                    res.status(200).render("register",payload);
                 }
                 // console.log(user);
                 // console.log("Its running");
