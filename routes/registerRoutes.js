@@ -3,6 +3,10 @@ const app =express();
 const router= express.Router();
 const bodyparser = require("body-parser");
 //body parser is useded to get the req.body;
+const User = require("../schemas/UserSchema");
+
+
+
 app.set("view engine","pug");
 app.set("views","views");
 app.use(bodyparser.urlencoded({extended: false}));//by this we can get the req.body
@@ -23,6 +27,18 @@ router.post("/",(req,res,next)=>{
 
     if(firstname&&lastname&&username&&email&&password)
     {
+         User.findOne({
+             $or:[
+                {userName:username},
+                {email: email}]
+                //just  or operator in mango db
+                //these pink brackets are like where clause
+                })
+                .then((user)=>{
+                  console.log(user);
+                })
+         // its going to find a one row where userName in schema = username in register.js;
+        
     }
     else{
         payload.errorMessage = "Make sure each field has a valid email.";
