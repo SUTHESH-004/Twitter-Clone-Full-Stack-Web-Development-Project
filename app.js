@@ -5,7 +5,7 @@ const middleware = require('./middleware')
 const path = require('path');
 const bodyparser = require("body-parser");
 const mongoose = require("./database");
-
+const session = require("express-session");
 
 
 const server = app.listen(port,()=>console.log("Server listening on port " + port));
@@ -15,7 +15,14 @@ app.set("views","views");
 app.use(bodyparser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,"public")));
 //public file static so anyone can use that 
-
+app.use(session({
+    secret:"suthesh",
+    resave:true,
+    saveUninitialized:false
+    // secret is used to hash the session 
+    //save the session
+    // did get initialized
+}));
 //
 //Routes
 const loginRoute= require('./routes/loginRoutes')
