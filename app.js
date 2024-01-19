@@ -10,7 +10,7 @@ const session = require("express-session");
 
 const server = app.listen(port,()=>console.log("Server listening on port " + port));
 
-app.set("view engine","pug");
+app.set("view engine","pug"); 
 app.set("views","views");
 app.use(bodyparser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,"public")));
@@ -27,8 +27,11 @@ app.use(session({
 //Routes
 const loginRoute= require('./routes/loginRoutes')
 const RegisterRoute= require('./routes/registerRoutes')
+const logOutRoute=require('./routes/logout')
+
 app.use("/login",loginRoute);
 app.use("/register",RegisterRoute);
+app.use("/logout",logOutRoute);
 
 app.get("/",middleware.requireLogin,(req,res,next)=>{
 

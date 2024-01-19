@@ -1,0 +1,56 @@
+:root{
+    --blue-color:blue;
+    --btnhoverbg:#d4edff;
+    --spacing: 15px
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    color:#74c0fc;
+    text-decoration: none;
+}
+nav{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    /* background-color: red; */
+}
+nav a{
+    display: flex;
+    padding: 10px;
+    font-size: 30px;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+nav .blue
+{
+    color: var(--blue-color);
+}
+nav a:hover{
+    background-color: #d4edff;
+    border-radius: 50%;
+    /* color: #74c0fc; */
+    
+}
+ 
+.mainSectionContainer{
+    padding:0;
+    border-left:1px solid rgb(230,236,240);
+    border-right:1px solid rgb(230,236,240);
+    display: flex;
+    flex-direction: column;
+       /* background-color: blue; */
+}
+.titleContainer{
+    height: 53px;
+    padding: 0 var(--spacing);
+    display: flex;
+}

@@ -35,7 +35,7 @@ router.post("/",async(req,res,next)=>{
                 //just  or operator in mango db
                 //these pink brackets are like where clause
                 })
-                .catch(()=>{
+                .catch((error)=>{
                     console.log(error);
                     payload.errorMessage = "Something went wrong";
                     res.status(200).render("register",payload);

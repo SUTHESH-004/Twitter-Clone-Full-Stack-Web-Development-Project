@@ -14,6 +14,8 @@ class Database{
 
     connect(){
         mongoose.connect("mongodb+srv://Suthesh:icecream@cluster0.njlrnsv.mongodb.net/TwitterCloneDb?retryWrites=true&w=majority")
+        // mongoose.connect("mongodb+srv://Suthesh:icecream@twitterclonebysuthesh.ykv1i59.mongodb.net/?retryWrites=true&w=majority")
+        
 
 //be careful when you add this link you want a password without any special characters;
         .then(()=>
