@@ -1,5 +1,5 @@
 :root{
-    --blue-color:blue;
+    --blue-color:#1fa2f1;
     --btnhoverbg:#d4edff;
     --spacing: 15px
 }
@@ -19,7 +19,16 @@ nav{
     height: 100%;
     /* background-color: red; */
 }
+*{
+    outline: none !important;
+}
+h1{
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
 nav a{
+    color: #212529;
     display: flex;
     padding: 10px;
     font-size: 30px;
@@ -53,4 +62,51 @@ nav a:hover{
     height: 53px;
     padding: 0 var(--spacing);
     display: flex;
+    border-bottom: 1px solid rgb(230,236,240);
+    /* justify-self: center; */
+    justify-content: center;
+    align-items: center;
+    flex-shrink:0;
+    /* if we didn't put flex shrink it will cause error in safari */
 }
+.titleContainer h1{
+    flex:1;
+}
+
+.postFormContainer{
+    display: flex;
+    padding:var(--spacing);
+    border-bottom: 10px solid rgb(230,236,240);
+    flex-shrink: 0;
+}
+.userImageContainer {
+    /* background-color: blackn; */
+    width: 50px;
+    height: 50px;
+}
+.userImageContainer img {
+    width: 100%;
+    border-radius:50%;
+    background-color: white;
+}
+.textAreaContainer{
+   flex:1;
+   padding-left: var(--spacing);
+}
+.textAreaContainer textarea{
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 18px;
+}
+#submitPostButton{
+    background-color: #1fa2f1;
+    color: white;
+    border:none;
+    border-radius:14px;
+}
+#submitPostButton:disabled{
+      background-color: #9bd1f9;
+}
+
+
