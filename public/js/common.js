@@ -26,9 +26,9 @@ $("#submitPostButton").click((event)=>
      var data = {
         content:textbox.val()
      }
-     $.post("/api/posts",data,(postdata,status,xhr)=>{
+     $.post("/api/posts ",data,(postdata,status,xhr)=>{
         
-      
+      alert(postData);
      }
     //  xhr xml http request
     // $.post is a ajax code
