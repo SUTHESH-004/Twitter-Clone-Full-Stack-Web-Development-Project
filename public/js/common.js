@@ -23,15 +23,27 @@ $("#submitPostButton").click((event)=>
      var button = $(event.target);
      var textbox =$("#postTextarea");
 
+
      var data = {
         content:textbox.val() 
      }
-     $.post("/api/posts ",data,(postdata,status,xhr)=>{
+     $.post("/api/posts ",data,(postdata)=>{
         
-      console.log(postdata)
+        var html = createPostHtml(postdata);
+        $(".postsContainer").prepend(html);
+        textbox.val("");
+        button.prop("disabled",true);
+
+
+      // console.log(postdata);
       // alert(postdata);
      }
     //  xhr xml http request
     // $.post is a ajax code
 
  ) })
+  
+   function createPostHtml(postdata)
+   {
+       return postdata.content;
+   }
