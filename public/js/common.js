@@ -21,14 +21,14 @@ $("#postTextarea").keyup((event)=>
 $("#submitPostButton").click((event)=>
 {
      var button = $(event.target);
-     var textbx =$("#postTextarea");
+     var textbox =$("#postTextarea");
 
      var data = {
-        content:textbox.val()
+        content:textbox.val() 
      }
      $.post("/api/posts ",data,(postdata,status,xhr)=>{
         
-      alert(postData);
+      alert(postdata);
      }
     //  xhr xml http request
     // $.post is a ajax code
