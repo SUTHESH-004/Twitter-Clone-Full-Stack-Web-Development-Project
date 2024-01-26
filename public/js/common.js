@@ -28,7 +28,8 @@ $("#submitPostButton").click((event)=>
      }
      $.post("/api/posts ",data,(postdata,status,xhr)=>{
         
-      alert(postdata);
+      console.log(postdata)
+      // alert(postdata);
      }
     //  xhr xml http request
     // $.post is a ajax code
