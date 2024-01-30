@@ -6,9 +6,17 @@ block content
       form(method="post")
 
             p.errorMessage #{errorMessage}
-            input(type="text", name="logUserName",placeholder="Username or email",autocomplete="off",required="")        
-            input(type="password", name="logPassword",placeholde
-            r="Username or email",placeholder="enter the password",required="") 
+            //- input(type="text", name="logUserName",placeholder="Username or email",autocomplete="off",required="")        
+            //- input(type="password", name="logPassword",placeholde
+            //- r="Username or email",placeholder="enter the password",required="") 
+            //- input(type="submit",value="login")
+            //- orginal above 
+
+            input(type="text", name="logUserName",placeholder="Username or email",value="Suthesh",autocomplete="off",required="")        
+            input(type="password", name="logPassword",placeholder="enter the password",value="1234",required="") 
             input(type="submit",value="login")
+
+            //- dummy above
+
             br
             a(href="/register") Need an account? Register here.
