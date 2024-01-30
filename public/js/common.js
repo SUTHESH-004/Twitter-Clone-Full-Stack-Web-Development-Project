@@ -47,6 +47,9 @@ $("#submitPostButton").click((event)=>
    {
     
      var postedBy = postdata.postedBy;
+     if(postedBy._id==undefined){
+        return console.log("User object is not populated");
+     }
      var displayName=postedBy.firstName +" "+postedBy.lastName;
      var timestamp =postedBy.createdAt;
 
