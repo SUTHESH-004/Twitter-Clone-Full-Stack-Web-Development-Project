@@ -15,7 +15,7 @@ function outputPosts(results,container){
             var html = createPostHtml(result)
             container.append(html);
         });
-        if(result.length==0)
+        if(results.length ==0)
         {
             container.append("<span class='noResult'>Nothing to show Create a new ONe<span>");
         }
