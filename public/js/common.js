@@ -45,5 +45,46 @@ $("#submitPostButton").click((event)=>
   
    function createPostHtml(postdata)
    {
-       return postdata.content;
+    
+     var postedBy = postdata.postedBy;
+     var displayName=postedBy.firstName +" "+postedBy.lastName;
+     var timestamp =postedBy.createdAt;
+
+    return `<div class="post">
+        <div class="mainContentContainer">
+            <div class="userImageContainer">
+                <img src ="${postedBy.profilepic}">
+        </div>
+        <div class="postContentContainer">
+            <div class="header">
+                <a href="/profile/${postedBy.userName}" class="displayName">${displayName}</a>
+                <span class = 'userName'>${postedBy.userName}</span>
+                <span class = 'userName'>${timestamp}</span>
+
+            </div>
+            <div class="postBody">
+                <span>${postdata.content}</span>
+            </div>
+            <div class="postFooter">
+             <div class="postButtonContainer">
+             <button>
+                    <i class="fa-solid fa-comments-dollar"></i>
+                    
+             </button></div>
+             <div class="postButtonContainer">
+             <button>
+                    <i class="fa-solid fa-repeat"></i>
+                    
+             </button></div>
+             <div class="postButtonContainer">
+             <button>
+                    <i class="fa-regular fa-heart"></i>
+             </button></div>
+            </div>
+        </div>
+    </div>
+    </div>`;
+    // double ticks you can inject variable in javascript
+    //you can use jquery as well
+
    }
