@@ -31,7 +31,7 @@ const UserSchema = new Schema({
     },
     profilepic:{
         type:String,
-        default:"./images/profilepic.png"
+        default:"./images/profile-user-svgrepo-com.svg"
     }
 },{timestamps: true});
 
