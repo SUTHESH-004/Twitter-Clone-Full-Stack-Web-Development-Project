@@ -43,6 +43,32 @@ $("#submitPostButton").click((event)=>
 
  ) })
   
+
+ $(document).on("click",".likeButton",(event)=>
+ {
+    // alert("it worked");
+    var button = $(event.target);
+    var postId = getPostIdFromElement(button);
+    console.log(postId);
+      })
+   //   add click in document  when you load a dynamic content
+    function getPostIdFromElement(element)
+    {
+        var isRoot = element.hasClass('.post')
+
+        var rootElement = isRoot ? element:element.closest(".post");
+        var postId = rootElement.data().id;
+        if(postId===undefined)
+        return alert("postId undefined");
+        return postId;
+    }
+    // data() method returns all the data in the class
+    // closest() is method in jquery which will find the nearest class
+
+ 
+
+
+
    function createPostHtml(postdata)
    {
     
@@ -53,7 +79,7 @@ $("#submitPostButton").click((event)=>
      var displayName=postedBy.firstName +" "+postedBy.lastName;
      var timestamp =timeDifference(new Date(),new Date(postdata.createdAt));
 
-    return `<div class="post">
+    return `<div class="post" data-id=${postdata._id}>
         <div class="mainContentContainer">
             <div class="userImageContainer">
                 <img src ="${postedBy.profilepic}">
@@ -80,7 +106,7 @@ $("#submitPostButton").click((event)=>
                     
              </button></div>
              <div class="postButtonContainer">
-             <button>
+             <button class="likeButton">
                     <i class="fa-regular fa-heart"></i>
              </button></div>
             </div>
