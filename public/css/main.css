@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --blue-color:#1fa2f1;
     --btnhoverbg:#d4edff;
@@ -6,8 +9,14 @@
     --greytext:rgb(101,119,134);
     --greyButtonText:rgb(0,0,0,0.34);
 }
+body{
+    overflow-x:hidden;
+    overflow-y: scroll;
+}
 
-
+body::-webkit-scrollbar{
+    display:none;
+}
 
 a{
     color: inherit;
