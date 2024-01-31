@@ -32,7 +32,8 @@ const UserSchema = new Schema({
     profilepic:{
         type:String,
         default:"./images/profile-user-svgrepo-com.svg"
-    }
+    },
+    likes:[{type:Schema.Types.ObjectId,ref:'Post'}]
 },{timestamps: true});
 
 var User= mongoose.model('User',UserSchema);
