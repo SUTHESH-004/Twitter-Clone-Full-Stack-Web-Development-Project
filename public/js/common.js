@@ -28,7 +28,6 @@ $("#submitPostButton").click((event)=>
         content:textbox.val() 
      }
      $.post("/api/posts ",data,(postdata)=>{
-        
         var html = createPostHtml(postdata);
         $(".postsContainer").prepend(html);
         textbox.val("");
@@ -49,7 +48,18 @@ $("#submitPostButton").click((event)=>
     // alert("it worked");
     var button = $(event.target);
     var postId = getPostIdFromElement(button);
-    console.log(postId);
+    // console.log(postId);
+      if(postId ===undefined)
+        {
+            return;
+        }
+        $.ajax({
+            url:"/api/posts",
+            type:"PUT",
+            success:(postdata)=>{
+                console.log(postdata);
+            }
+        })
       })
    //   add click in document  when you load a dynamic content
     function getPostIdFromElement(element)

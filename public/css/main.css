@@ -1,5 +1,7 @@
 html{
     scroll-behavior: smooth;
+    /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
+    background-color: black;
 }
 :root{
     --blue-color:#1fa2f1;
@@ -8,22 +10,79 @@ html{
     --lightgrey:rgb(230,236,240);
     --greytext:rgb(101,119,134);
     --greyButtonText:rgb(0,0,0,0.34);
+    --temp:white;
 }
 body{
+    margin-top:30px ;
     overflow-x:hidden;
     overflow-y: scroll;
+    /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
+    background-color: transparent;
+    color:var(--greytext);
+}
+.fullwrapper
+{
+    display: flex;
+    flex-direction: column;
+}
+.introductionpage{
+    background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -5px;
+    outline: none;
+    border: none;
+    padding:none;
+    margin: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.introductionpage p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.638);
+}
+.introductionpage1{
+    background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash2.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:30px;
+    outline: none;
+    border: none;
+    padding:none;
+    margin: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.welcome{
+    padding-left:60px;
+    top:-30px;
+}
+.slogan p{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.638);
+    text-align: right;
+    padding-right: 60px;
+
 }
 
 body::-webkit-scrollbar{
     display:none;
 }
 
+
 a{
     color: inherit;
     text-decoration: none;
 }
 a:hover{
-    color:#74c0fc;
+    color:black;
     text-decoration: none;
 }
 nav{
@@ -63,22 +122,24 @@ nav .blue
     color: var(--blue-color);
 }
 nav a:hover{
-    background-color: #d4edff;
+    background-color:rgba(245, 244, 244, 0.752);
     border-radius: 50%;
+    --temp :black;
     /* color: #74c0fc; */
     
 }
 .mainSectionContainer{
     padding:0;
-    border-left:1px solid rgb(230,236,240);
-    border-right:1px solid rgb(230,236,240);
+    /* border-left:1px solid rgb(230,236,240); */
+    /* border-right:1px solid rgb(230,236,240); */
     display: flex;
     flex-direction: column;
-       /* background-color: blue; */
+       background-color:transparent;
 }
 .titleContainer{
     height: 53px;
     padding: 0 var(--spacing);
+    margin-bottom: 30px;
     display: flex;
     border-bottom: 1px solid rgb(230,236,240);
     /* justify-self: center; */
@@ -96,6 +157,7 @@ nav a:hover{
     padding:var(--spacing);
     border-bottom: 10px solid rgb(230,236,240);
     flex-shrink: 0;
+    background-color: white;
 }
 .userImageContainer {
     /* background-color: blackn; */
@@ -129,10 +191,14 @@ nav a:hover{
 .post{
     display:flex;
     flex-direction: column;
+    margin-top: 10px;
     padding: var(--spacing);
     cursor: pointer;
-    border-bottom: 1px solid var(--lightgrey);
+    border: 1px solid var(--lightgrey);
     flex-shrink: 0;
+    background-color: white;
+    border-radius: 1.5rem 1.5rem 1.5rem 0rem;
+
 }
 .mainContentContainer{
     flex: 1;
@@ -143,6 +209,10 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     flex:1;}
+/* .postContentContainer > .post{
+    border: 1px solid black;
+    border-radius: 1.5rem;
+} */
 .username,.date{
     color:var(--greytext);
 }
@@ -173,5 +243,13 @@ nav a:hover{
     color: var(--blue-color);
     border-radius:50%;
 }
+i{
+    color:var(--temp);
+}
 
+
+/* i:hover{
+    color: black;
+    background-color: white;
+} */
 
