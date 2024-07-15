@@ -1,255 +1,283 @@
-html{
-    scroll-behavior: smooth;
-    /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
-    background-color: black;
+html {
+  scroll-behavior: smooth;
+  /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
+  background-color: black;
 }
-:root{
-    --blue-color:#1fa2f1;
-    --btnhoverbg:#d4edff;
-    --spacing:20px;
-    --lightgrey:rgb(230,236,240);
-    --greytext:rgb(101,119,134);
-    --greyButtonText:rgb(0,0,0,0.34);
-    --temp:white;
+:root {
+  --blue-color: #1fa2f1;
+  --btnhoverbg: #d4edff;
+  --spacing: 20px;
+  --lightgrey: rgb(230, 236, 240);
+  --greytext: rgb(101, 119, 134);
+  --greyButtonText: rgb(0, 0, 0, 0.34);
+  --temp: white;
 }
-body{
-    margin-top:30px ;
-    overflow-x:hidden;
-    overflow-y: scroll;
-    /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
-    background-color: transparent;
-    color:var(--greytext);
+body {
+  margin-top: 30px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* background-image: url("/images/milad-fakurian-0rL7ucprd90-unsplash.jpg"); */
+  background-color: transparent;
+  color: var(--greytext);
 }
-.fullwrapper
-{
-    display: flex;
-    flex-direction: column;
+.fullwrapper {
+  display: flex;
+  flex-direction: column;
 }
-.introductionpage{
-    background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -5px;
-    outline: none;
-    border: none;
-    padding:none;
-    margin: none;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
+.introductionpage {
+  background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -5px;
+  outline: none;
+  border: none;
+  padding: none;
+  margin: none;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
-.introductionpage p{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 120px;
-    color: rgba(255, 255, 255, 0.638);
+.introductionpage p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.638);
 }
-.introductionpage1{
-    background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash2.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:30px;
-    outline: none;
-    border: none;
-    padding:none;
-    margin: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+.introductionpage1 {
+  background-image: url("/images/milad-fakurian-RVM5HYqg2jA-unsplash2.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30px;
+  outline: none;
+  border: none;
+  padding: none;
+  margin: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
-.welcome{
-    padding-left:60px;
-    top:-30px;
+.welcome {
+  padding-left: 60px;
+  top: -30px;
 }
-.slogan p{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 40px;
-    color: rgba(255, 255, 255, 0.638);
-    text-align: right;
-    padding-right: 60px;
+/* .slogan {
+  display: flex;
+  flex-direction: row;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.638);
+  text-align: right;
+} */
 
+.comments_pointer {
+  /* position: fixed; */
+  /* top: 10px; */
+  transform: translateY(-40vh);
+  height: 20vh;
+  width: 100vw;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.down-arrow {
+  height: 200px;
+  width: 600px;
+  text-align: center;
+  font-size: 100px;
+  /* background-color: black; */
+  background-image: url("/images/down-arrow-1.svg");
 
-body::-webkit-scrollbar{
-    display:none;
-}
-
-
-a{
-    color: inherit;
-    text-decoration: none;
-}
-a:hover{
-    color:black;
-    text-decoration: none;
-}
-nav{
-    display:flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 100%;
-    /* background-color: red; */
-}
-*{
-    outline: none !important;
-}
-h1{
-    font-size: 19px;
-    font-weight: 800;
-    margin: 0;
-}
-nav a{
-    color: #212529;
-    display: flex;
-    padding: 10px;
-    font-size: 30px;
-    width: 55px;
-    height: 55px;
-    align-items: center;
-    justify-content: center;
-    
-    
-}
-button{ 
-    background-color: transparent;
-    border: none;
-    color: var(--greyButtonText);
-}
-nav .blue
-{
-    color: var(--blue-color);
-}
-nav a:hover{
-    background-color:rgba(245, 244, 244, 0.752);
-    border-radius: 50%;
-    --temp :black;
-    /* color: #74c0fc; */
-    
-}
-.mainSectionContainer{
-    padding:0;
-    /* border-left:1px solid rgb(230,236,240); */
-    /* border-right:1px solid rgb(230,236,240); */
-    display: flex;
-    flex-direction: column;
-       background-color:transparent;
-}
-.titleContainer{
-    height: 53px;
-    padding: 0 var(--spacing);
-    margin-bottom: 30px;
-    display: flex;
-    border-bottom: 1px solid rgb(230,236,240);
-    /* justify-self: center; */
-    justify-content: center;
-    align-items: center;
-    flex-shrink:0;
-    /* if we didn't put flex shrink it will cause error in safari */
-}
-.titleContainer h1{
-    flex:1;
+  background-position: center;
+  background-size: cover;
 }
 
-.postFormContainer{
-    display: flex;
-    padding:var(--spacing);
-    border-bottom: 10px solid rgb(230,236,240);
-    flex-shrink: 0;
-    background-color: white;
+.slogan p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 40px;
+  color: #ffffffa3;
+  text-align: right;
+  padding-right: 60px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  /* background-color: red; */
+}
+* {
+  outline: none !important;
+}
+h1 {
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0;
+}
+nav a {
+  color: #212529;
+  display: flex;
+  padding: 10px;
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  background-color: transparent;
+  border: none;
+  color: var(--greyButtonText);
+}
+nav .blue {
+  color: var(--blue-color);
+}
+nav a:hover {
+  background-color: rgba(245, 244, 244, 0.752);
+  border-radius: 50%;
+  --temp: black;
+  /* color: #74c0fc; */
+}
+.mainSectionContainer {
+  padding: 0;
+  /* border-left:1px solid rgb(230,236,240); */
+  /* border-right:1px solid rgb(230,236,240); */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+.titleContainer {
+  height: 53px;
+  padding: 0 var(--spacing);
+  margin-bottom: 30px;
+  display: flex;
+  border-bottom: 1px solid rgb(230, 236, 240);
+  /* justify-self: center; */
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  /* if we didn't put flex shrink it will cause error in safari */
+}
+.titleContainer h1 {
+  flex: 1;
+}
+
+.postFormContainer {
+  display: flex;
+  padding: var(--spacing);
+  border-bottom: 10px solid rgb(230, 236, 240);
+  flex-shrink: 0;
+  background-color: white;
 }
 .userImageContainer {
-    /* background-color: blackn; */
-    width: 50px;
-    height: 50px;
+  /* background-color: blackn; */
+  width: 50px;
+  height: 50px;
 }
 .userImageContainer img {
-    width: 100%;
-    border-radius:50%;
-    background-color: white;
+  width: 100%;
+  border-radius: 50%;
+  background-color: white;
 }
-.textAreaContainer{
-   flex:1;
-   padding-left: var(--spacing);
+.textAreaContainer {
+  flex: 1;
+  padding-left: var(--spacing);
 }
-.textAreaContainer textarea{
-    width: 100%;
-    border: none;
-    resize: none;
-    font-size: 18px;
+.textAreaContainer textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 18px;
 }
-#submitPostButton{
-    background-color: #1fa2f1;
-    color: white;
-    border:none;
-    border-radius:14px;
+#submitPostButton {
+  background-color: #1fa2f1;
+  color: white;
+  border: none;
+  border-radius: 14px;
 }
-#submitPostButton:disabled{
-      background-color: #9bd1f9;
+#submitPostButton:disabled {
+  background-color: #9bd1f9;
 }
-.post{
-    display:flex;
-    flex-direction: column;
-    margin-top: 10px;
-    padding: var(--spacing);
-    cursor: pointer;
-    border: 1px solid var(--lightgrey);
-    flex-shrink: 0;
-    background-color: white;
-    border-radius: 1.5rem 1.5rem 1.5rem 0rem;
-
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: var(--spacing);
+  cursor: pointer;
+  border: 1px solid var(--lightgrey);
+  flex-shrink: 0;
+  background-color: white;
+  border-radius: 1.5rem 1.5rem 1.5rem 0rem;
 }
-.mainContentContainer{
-    flex: 1;
-    display: flex;
-    /* flex-direction: row; */}
-.postContentContainer{
-    padding-left:var(--spacing);
-    display: flex;
-    flex-direction: column;
-    flex:1;}
+.mainContentContainer {
+  flex: 1;
+  display: flex;
+  /* flex-direction: row; */
+}
+.postContentContainer {
+  padding-left: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
 /* .postContentContainer > .post{
     border: 1px solid black;
     border-radius: 1.5rem;
 } */
-.username,.date{
-    color:var(--greytext);
+.username,
+.date {
+  color: var(--greytext);
 }
-.displayName{
-    font-weight: bold;
+.displayName {
+  font-weight: bold;
 }
-.postFooter{
-    display: flex;
-    align-items:center;
+.postFooter {
+  display: flex;
+  align-items: center;
 }
-.postFooter .postButtonContainer{
-    flex:1; 
-    display: flex;
+.postFooter .postButtonContainer {
+  flex: 1;
+  display: flex;
 }
-.postFooter .postButtonContainer button{
-    padding: 2px 5px;
-
+.postFooter .postButtonContainer button {
+  padding: 5px;
+  padding-top: 20px;
 }
-.header a:hover{
-    text-decoration: underline;
+.header a:hover {
+  text-decoration: underline;
 }
 .header a,
 .header span {
-    padding-right:5px;
+  padding-right: 5px;
 }
-.postButtonContainer button:hover{
-    background-color: #d4ddff;
-    color: var(--blue-color);
-    border-radius:50%;
+.postButtonContainer button:hover {
+  background-color: #d4ddff;
+  color: var(--blue-color);
+  border-radius: 50%;
 }
-i{
-    color:var(--temp);
+i {
+  color: var(--temp);
 }
-
+.postButtonContainer i {
+  color: black;
+}
 
 /* i:hover{
     color: black;
     background-color: white;
 } */
-

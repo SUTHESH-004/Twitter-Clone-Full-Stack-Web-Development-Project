@@ -5,9 +5,6 @@ const bodyParser = require("body-parser");
 const User = require('../../schemas/UserSchema');
 const Post = require('../../schemas/PostSchema');
 
-
-
-
 app.use(bodyParser.urlencoded({extended:false}));
 router.get("/",(req,res,next)=>{
     Post.find()

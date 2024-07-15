@@ -14,7 +14,6 @@ router.get("/",(req,res,next)=>{
     //see here we are changing this from "send" to "render"
 });
 router.post("/",async(req,res,next)=>{
-
     var payload = req.body;
     if(req.body.logUserName&&req.body.logPassword){
 

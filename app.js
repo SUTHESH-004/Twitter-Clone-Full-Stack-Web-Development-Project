@@ -1,13 +1,13 @@
 const express = require('express');
 const app =express();
 const port = 3000;
-const middleware = require('./middleware')
+
+const middleware = require('./middleware');
+
 const path = require('path');
 const bodyparser = require("body-parser");
 const mongoose = require("./database");
 const session = require("express-session");
-
-
 const server = app.listen(port,()=>console.log("Server listening on port " + port));
 
 app.set("view engine","pug"); 
@@ -44,7 +44,6 @@ app.get("/",middleware.requireLogin,(req,res,next)=>{
         pageTitle: "Home",
         userLoggedIn:req.session.user
     }
-    
     res.status(200).render("home",payload);
     //see here we are changing this from "send" to "render"
     // rendering the home pug file and passing payload object to change data dynamically

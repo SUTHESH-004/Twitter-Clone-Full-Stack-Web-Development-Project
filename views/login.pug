@@ -2,21 +2,17 @@ extends layouts/login-layout.pug
 
 block content 
     .loginContainer 
-      h1 LOGIN 
+      h1 Sign In
       form(method="post")
 
             p.errorMessage #{errorMessage}
-            //- input(type="text", name="logUserName",placeholder="Username or email",autocomplete="off",required="")        
-            //- input(type="password", name="logPassword",placeholde
-            //- r="Username or email",placeholder="enter the password",required="") 
-            //- input(type="submit",value="login")
-            //- orginal above 
-
-            input(type="text", name="logUserName",placeholder="Username or email",value="Suthesh",autocomplete="off",required="")        
-            input(type="password", name="logPassword",placeholder="enter the password",value="1234",required="") 
+            input(type="text", name="logUserName",placeholder="Username or email",autocomplete="off",required="")        
+            input(type="password", name="logPassword",placeholde
+            r="Username or email",placeholder="enter the password",required="") 
             input(type="submit",value="login")
-
-            //- dummy above
-
+            //- orginal above 
+            //- input(type="text", name="logUserName",placeholder="Username or email",value="Suthesh",autocomplete="off",required="")        
+            //- input(type="password", name="logPassword",placeholder="enter the password",value="1234",required="") 
+            //- input(type="submit",value="login")
             br
             a(href="/register") Need an account? Register here.
